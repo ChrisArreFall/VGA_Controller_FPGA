@@ -1,0 +1,30 @@
+module tb_convertidorFrecuenciaVGA();
+	logic clk_referencia,clk_VGA;
+	
+	// instantiate device under test 
+	convertidorFrecuenciaVGA dut(clk_referencia,clk_VGA); 
+	
+	initial 
+		begin 
+	//primer periodo
+			clk_referencia=0;
+				assert (clk_VGA === 0) else $error("Fallo debo der 0."); 
+			clk_referencia=1;
+				assert (clk_VGA === 0) else $error("Fallo debo der 0.");
+			clk_referencia=0;
+				assert (clk_VGA === 0) else $error("Fallo debo der 0.");
+			clk_referencia=1;
+				assert (clk_VGA === 1) else $error("Fallo debo der 1."); 
+	//segundo periodo
+			clk_referencia=0;
+				assert (clk_VGA === 0) else $error("Fallo debo der 0."); 
+			clk_referencia=1;
+				assert (clk_VGA === 0) else $error("Fallo debo der 0."); 
+			clk_referencia=0;
+				assert (clk_VGA === 0) else $error("Fallo debo der 0."); 
+			clk_referencia=1;
+				assert (clk_VGA === 1) else $error("Fallo debo der 1."); 
+		end 
+	
+	
+endmodule

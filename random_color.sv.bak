@@ -1,0 +1,21 @@
+module random_color#(parameter N = 8)(input logic clk,
+												  input logic reset,
+												  output logic [N-1:0] data);
+
+   logic [N-1:0] data_next;
+   always_comb begin
+      data_next = data;
+      repeat(N) begin
+         data_next = {(data_next[4]^data_next[1]), data_next[4:1]};
+      end
+   end
+
+   always_ff @(posedge clk or negedge reset) begin
+      if(!reset)
+         data <= 5'h1f;
+      else
+         data <= data_next;
+      end
+   end
+
+endmodule

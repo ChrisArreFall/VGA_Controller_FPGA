@@ -1,0 +1,22 @@
+module pintadorXY(input logic clk,reset,
+						input logic [2:0] cuadrante_actual,
+						input logic [9:0] x, y,
+						output logic [7:0] r,g,b);
+				
+				logic [7:0] r_1,g_1,b_1,r_2,g_2,b_2,r_3,g_3,b_3,r_4,g_4,b_4,r_elec,g_elec,b_elec;
+				
+				always_ff @(posedge clk)
+					if(reset) 
+						begin
+							r	<= 0;
+							g	<= 0;
+							b	<= 0;
+						end
+					else
+						begin
+							r 	<= r_elec;
+							g	<= g_elec;
+							b	<= b_elec;
+						end
+endmodule
+
