@@ -3,147 +3,147 @@ Timing Analyzer Summary
 ------------------------------------------------------------
 
 Type  : Slow 1100mV 85C Model Setup 'HV_sync:vga_sync_unit|pixel_temp'
-Slack : -5.574
-TNS   : -16.514
+Slack : -5.383
+TNS   : -15.962
 
 Type  : Slow 1100mV 85C Model Setup 'clk'
-Slack : -3.881
-TNS   : -74.535
+Slack : -3.570
+TNS   : -68.074
 
 Type  : Slow 1100mV 85C Model Setup 'cuadrante'
-Slack : -0.143
-TNS   : -0.324
+Slack : -0.922
+TNS   : -4.106
 
 Type  : Slow 1100mV 85C Model Hold 'cuadrante'
-Slack : 0.237
+Slack : 0.278
 TNS   : 0.000
 
 Type  : Slow 1100mV 85C Model Hold 'clk'
-Slack : 0.371
+Slack : 0.389
 TNS   : 0.000
 
 Type  : Slow 1100mV 85C Model Hold 'HV_sync:vga_sync_unit|pixel_temp'
-Slack : 3.424
+Slack : 2.109
 TNS   : 0.000
 
 Type  : Slow 1100mV 85C Model Minimum Pulse Width 'clk'
-Slack : -0.818
-TNS   : -13.048
-
-Type  : Slow 1100mV 85C Model Minimum Pulse Width 'HV_sync:vga_sync_unit|pixel_temp'
-Slack : -0.394
-TNS   : -1.556
+Slack : -0.460
+TNS   : -12.416
 
 Type  : Slow 1100mV 85C Model Minimum Pulse Width 'cuadrante'
 Slack : -0.394
-TNS   : -1.554
+TNS   : -3.757
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'HV_sync:vga_sync_unit|pixel_temp'
+Slack : -0.394
+TNS   : -1.778
 
 Type  : Slow 1100mV 0C Model Setup 'HV_sync:vga_sync_unit|pixel_temp'
-Slack : -5.638
-TNS   : -16.713
+Slack : -5.521
+TNS   : -16.304
 
 Type  : Slow 1100mV 0C Model Setup 'clk'
-Slack : -3.818
-TNS   : -69.248
+Slack : -3.348
+TNS   : -61.580
 
 Type  : Slow 1100mV 0C Model Setup 'cuadrante'
-Slack : -0.169
-TNS   : -0.394
+Slack : -1.030
+TNS   : -4.550
 
 Type  : Slow 1100mV 0C Model Hold 'cuadrante'
-Slack : 0.223
+Slack : 0.336
 TNS   : 0.000
 
 Type  : Slow 1100mV 0C Model Hold 'clk'
-Slack : 0.372
+Slack : 0.342
 TNS   : 0.000
 
 Type  : Slow 1100mV 0C Model Hold 'HV_sync:vga_sync_unit|pixel_temp'
-Slack : 3.615
+Slack : 2.122
 TNS   : 0.000
 
 Type  : Slow 1100mV 0C Model Minimum Pulse Width 'clk'
-Slack : -0.834
-TNS   : -13.830
-
-Type  : Slow 1100mV 0C Model Minimum Pulse Width 'HV_sync:vga_sync_unit|pixel_temp'
-Slack : -0.394
-TNS   : -1.725
+Slack : -0.437
+TNS   : -13.183
 
 Type  : Slow 1100mV 0C Model Minimum Pulse Width 'cuadrante'
 Slack : -0.394
-TNS   : -1.635
+TNS   : -4.187
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'HV_sync:vga_sync_unit|pixel_temp'
+Slack : -0.394
+TNS   : -1.609
 
 Type  : Fast 1100mV 85C Model Setup 'HV_sync:vga_sync_unit|pixel_temp'
-Slack : -3.156
-TNS   : -9.363
+Slack : -2.880
+TNS   : -8.523
 
 Type  : Fast 1100mV 85C Model Setup 'clk'
-Slack : -3.153
-TNS   : -54.475
+Slack : -2.623
+TNS   : -46.715
 
 Type  : Fast 1100mV 85C Model Setup 'cuadrante'
-Slack : 0.321
-TNS   : 0.000
+Slack : -0.050
+TNS   : -0.122
 
 Type  : Fast 1100mV 85C Model Hold 'cuadrante'
-Slack : 0.141
+Slack : 0.159
 TNS   : 0.000
 
 Type  : Fast 1100mV 85C Model Hold 'clk'
-Slack : 0.212
+Slack : 0.219
 TNS   : 0.000
 
 Type  : Fast 1100mV 85C Model Hold 'HV_sync:vga_sync_unit|pixel_temp'
-Slack : 1.959
+Slack : 1.307
 TNS   : 0.000
 
 Type  : Fast 1100mV 85C Model Minimum Pulse Width 'clk'
-Slack : -0.741
-TNS   : -2.967
+Slack : -0.435
+TNS   : -2.497
 
 Type  : Fast 1100mV 85C Model Minimum Pulse Width 'cuadrante'
-Slack : -0.085
-TNS   : -0.254
+Slack : -0.088
+TNS   : -0.505
 
 Type  : Fast 1100mV 85C Model Minimum Pulse Width 'HV_sync:vga_sync_unit|pixel_temp'
-Slack : 0.119
+Slack : 0.148
 TNS   : 0.000
 
 Type  : Fast 1100mV 0C Model Setup 'HV_sync:vga_sync_unit|pixel_temp'
-Slack : -2.997
-TNS   : -8.893
+Slack : -2.786
+TNS   : -8.257
 
 Type  : Fast 1100mV 0C Model Setup 'clk'
-Slack : -2.745
-TNS   : -43.097
+Slack : -2.180
+TNS   : -35.966
 
 Type  : Fast 1100mV 0C Model Setup 'cuadrante'
-Slack : 0.346
-TNS   : 0.000
-
-Type  : Fast 1100mV 0C Model Hold 'cuadrante'
-Slack : 0.128
+Slack : 0.003
 TNS   : 0.000
 
 Type  : Fast 1100mV 0C Model Hold 'clk'
-Slack : 0.194
+Slack : 0.105
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Hold 'cuadrante'
+Slack : 0.167
 TNS   : 0.000
 
 Type  : Fast 1100mV 0C Model Hold 'HV_sync:vga_sync_unit|pixel_temp'
-Slack : 1.937
+Slack : 1.331
 TNS   : 0.000
 
 Type  : Fast 1100mV 0C Model Minimum Pulse Width 'clk'
-Slack : -0.729
-TNS   : -3.006
+Slack : -0.411
+TNS   : -2.438
 
 Type  : Fast 1100mV 0C Model Minimum Pulse Width 'cuadrante'
-Slack : -0.086
-TNS   : -0.256
+Slack : -0.089
+TNS   : -0.589
 
 Type  : Fast 1100mV 0C Model Minimum Pulse Width 'HV_sync:vga_sync_unit|pixel_temp'
-Slack : 0.143
+Slack : 0.162
 TNS   : 0.000
 
 ------------------------------------------------------------

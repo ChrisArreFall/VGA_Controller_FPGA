@@ -1,4 +1,4 @@
-module MAIN_VGA_TEST(input  logic clk, reset, cuadrante,
+module MAIN_VGA_TEST(input  logic clk, reset, reset_color, cuadrante,
 							input  logic [2:0] sw,
 							output logic hsync, vsync, n_sync, n_blanc, n25MHZCLK,
 							output logic [7:0] r,g,b,

@@ -1,1 +1,1 @@
-Warning (10268): Verilog HDL information at pintadorXY.sv(41): always construct contains both blocking and non-blocking assignments File: C:/Users/Chris/Documents/TEC/Taller/LAB_5/VGA_Controller_FPGA/pintadorXY.sv Line: 41
+Warning (10268): Verilog HDL information at random_color.sv(5): always construct contains both blocking and non-blocking assignments File: C:/Users/Chris/Documents/TEC/Taller/LAB_5/VGA_Controller_FPGA/random_color.sv Line: 5

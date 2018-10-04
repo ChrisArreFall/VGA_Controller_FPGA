@@ -8,55 +8,53 @@ z2
 !i10f 100
 cModel Technology
 Z0 dC:/Users/Chris/Documents/TEC/Taller/LAB_5/VGA_Controller_FPGA/simulation/modelsim
-vseccionFSM
+vrandom_color
 Z1 DXx6 sv_std 3 std 0 22 AD7iAPLo6nTIKk<N0eo=D3
-Z2 !s110 1538383253
+Z2 !s110 1538638745
 !i10b 1
-!s100 zVeMg5a_QQT`OjbhWhaJd3
-IKl>83MalUae0P?j5HZ;oM0
+!s100 VfGc<^0S3d9:j[mllRL;l0
+IfBO[GcT20G?1gbKAS<6XI1
 Z3 VDg1SIo80bB@j0V0VzS_@n1
-!s105 seccionFSM_sv_unit
+!s105 random_color_sv_unit
 S1
 R0
-w1538382563
-8C:/Users/Chris/Documents/TEC/Taller/LAB_5/VGA_Controller_FPGA/seccionFSM.sv
-FC:/Users/Chris/Documents/TEC/Taller/LAB_5/VGA_Controller_FPGA/seccionFSM.sv
+w1538638075
+8C:/Users/Chris/Documents/TEC/Taller/LAB_5/VGA_Controller_FPGA/random_color.sv
+FC:/Users/Chris/Documents/TEC/Taller/LAB_5/VGA_Controller_FPGA/random_color.sv
 L0 1
 Z4 OV;L;10.5b;63
 r1
 !s85 0
 31
-Z5 !s108 1538383253.000000
-!s107 C:/Users/Chris/Documents/TEC/Taller/LAB_5/VGA_Controller_FPGA/seccionFSM.sv|
-!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Chris/Documents/TEC/Taller/LAB_5/VGA_Controller_FPGA|C:/Users/Chris/Documents/TEC/Taller/LAB_5/VGA_Controller_FPGA/seccionFSM.sv|
+Z5 !s108 1538638745.000000
+!s107 C:/Users/Chris/Documents/TEC/Taller/LAB_5/VGA_Controller_FPGA/random_color.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Chris/Documents/TEC/Taller/LAB_5/VGA_Controller_FPGA|C:/Users/Chris/Documents/TEC/Taller/LAB_5/VGA_Controller_FPGA/random_color.sv|
 !i113 1
 Z6 o-sv -work work
 Z7 !s92 -sv -work work +incdir+C:/Users/Chris/Documents/TEC/Taller/LAB_5/VGA_Controller_FPGA
 Z8 tCvgOpt 0
-nseccion@f@s@m
-vtb_seccionFSM
+vtb_random_color
 R1
 R2
 !i10b 1
-!s100 HG6Rk@aEZE6ncY]DN=i3O0
-I=Y?SiWEfH<gh@GOJ_3>1]2
+!s100 o3dHcL3dLM;hDa36NbPYa1
+Il:Ld2N9:JXHKbbVfElP7?2
 R3
-!s105 tb_seccionFSM_sv_unit
+!s105 tb_random_color_sv_unit
 S1
 R0
-w1538383206
-8C:/Users/Chris/Documents/TEC/Taller/LAB_5/VGA_Controller_FPGA/tb_seccionFSM.sv
-FC:/Users/Chris/Documents/TEC/Taller/LAB_5/VGA_Controller_FPGA/tb_seccionFSM.sv
+w1538638709
+8C:/Users/Chris/Documents/TEC/Taller/LAB_5/VGA_Controller_FPGA/tb_random_color.sv
+FC:/Users/Chris/Documents/TEC/Taller/LAB_5/VGA_Controller_FPGA/tb_random_color.sv
 L0 1
 R4
 r1
 !s85 0
 31
 R5
-!s107 C:/Users/Chris/Documents/TEC/Taller/LAB_5/VGA_Controller_FPGA/tb_seccionFSM.sv|
-!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Chris/Documents/TEC/Taller/LAB_5/VGA_Controller_FPGA|C:/Users/Chris/Documents/TEC/Taller/LAB_5/VGA_Controller_FPGA/tb_seccionFSM.sv|
+!s107 C:/Users/Chris/Documents/TEC/Taller/LAB_5/VGA_Controller_FPGA/tb_random_color.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Chris/Documents/TEC/Taller/LAB_5/VGA_Controller_FPGA|C:/Users/Chris/Documents/TEC/Taller/LAB_5/VGA_Controller_FPGA/tb_random_color.sv|
 !i113 1
 R6
 R7
 R8
-ntb_seccion@f@s@m

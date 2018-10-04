@@ -99,10 +99,12 @@ set_global_assignment -name SYSTEMVERILOG_FILE tb_random_color.sv
 set_global_assignment -name SYSTEMVERILOG_FILE seccionFSM.sv
 set_global_assignment -name SYSTEMVERILOG_FILE pintadorXY.sv
 set_global_assignment -name SYSTEMVERILOG_FILE tb_seccionFSM.sv
-set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
-set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
-set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
 set_location_assignment PIN_V16 -to cuadrante_actual[0]
 set_location_assignment PIN_W16 -to cuadrante_actual[1]
 set_location_assignment PIN_V17 -to cuadrante_actual[2]
+set_location_assignment PIN_AA15 -to reset_color
+set_global_assignment -name SYSTEMVERILOG_FILE ff_t.sv
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

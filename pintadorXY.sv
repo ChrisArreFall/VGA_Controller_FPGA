@@ -10,34 +10,52 @@ module pintadorXY(input logic clk,clk2,reset,
 				logic [7:0] r_0,g_0,b_0,r_1,g_1,b_1,r_2,g_2,b_2,r_3,g_3,b_3,r_4,g_4,b_4,r_elec,g_elec,b_elec;
 				
 			
-				always_ff @(posedge clk2)
-					case(seccion_actual)
-						3'b001 : begin
-										r_1 = 8'b11111111;
-										g_1 = 0;
-										b_1 = 0;
-									end 
-						3'b010 : begin
-										r_2 = 0;
-										g_2 = 8'b11111111;
-										b_2 = 0;
-									end
-						3'b011 : begin
-										r_3 = 0;
-										g_3 = 0;
-										b_3 = 8'b11111111;
-									end 
-						3'b100 : begin
-										r_4 = 8'b11111111;
-										g_4 = 0;
-										b_4 = 8'b11111111;
-									end
-						default: begin
-										r_0 = 0;
-										g_0 = 0;
-										b_0 = 0;
-									end
-					endcase
+				always_ff @(negedge clk2)
+					if(seccion_actual==3'b000) 
+						begin
+							r_0 = 0;
+							g_0 = 0;
+							b_0 = 0;
+							r_1 = 0;
+							g_1 = 0;
+							b_1 = 0;
+							r_2 = 0;
+							g_2 = 0;
+							b_2 = 0;
+							r_3 = 0;
+							g_3 = 0;
+							b_3 = 0;
+							r_4 = 0;
+							g_4 = 0;
+							b_4 = 0;
+						end
+					else if(seccion_actual==3'b001) 
+						begin
+							r_1 = 8'b11111111;
+							g_1 = 0;
+							b_1 = 0;
+						end
+					else if(seccion_actual==3'b010)
+						begin
+							r_2 = 0;
+							g_2 = 8'b11111111;
+							b_2 = 0;
+						end
+					else if(seccion_actual==3'b011)
+						begin
+							r_3 = 0;
+							g_3 = 0;
+							b_3 = 8'b11111111;
+						end
+					else if(seccion_actual==3'b100)
+						begin
+							r_4 = 8'b11111111;
+							g_4 = 0;
+							b_4 = 8'b11111111;
+						end
+					else
+						begin
+						end
 				always_ff @(posedge clk)
 					if(reset) 
 						begin
@@ -81,4 +99,3 @@ module pintadorXY(input logic clk,clk2,reset,
 						
 				
 endmodule
-
