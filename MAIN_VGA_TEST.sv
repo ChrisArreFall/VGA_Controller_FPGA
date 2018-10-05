@@ -1,5 +1,4 @@
 module MAIN_VGA_TEST(input  logic clk, reset, reset_color, cuadrante,
-							input  logic [2:0] sw,
 							output logic hsync, vsync, n_sync, n_blanc, n25MHZCLK,
 							output logic [7:0] r,g,b,
 							output logic [2:0] cuadrante_actual);
@@ -14,7 +13,7 @@ module MAIN_VGA_TEST(input  logic clk, reset, reset_color, cuadrante,
 	// se elige la seccion a partir de el boton y la maquina de estados						  
 	seccionFSM 	seccionFSM_unit 	(cuadrante,reset,cuadrante_actual,cuadrante_actual);
 	// se pinta depende de la x y el cuadrante en el que estemos
-	pintadorXY 	pintadorXY_unit	(n25MHZCLK,cuadrante,reset,cuadrante_actual,x,y,r_siguiente,g_siguiente,b_siguiente);
+	pintadorXY 	pintadorXY_unit	(n25MHZCLK,cuadrante,reset,reset_color,cuadrante_actual,x,y,r_siguiente,g_siguiente,b_siguiente);
 	
 	
 	

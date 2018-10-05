@@ -51,14 +51,6 @@ set_location_assignment PIN_AF14 -to clk
 set_location_assignment PIN_B11 -to hsync
 set_location_assignment PIN_D11 -to vsync
 set_location_assignment PIN_AE12 -to reset
-set_location_assignment PIN_AB12 -to sw[0]
-set_location_assignment PIN_AC12 -to sw[1]
-set_location_assignment PIN_AF9 -to sw[2]
-set_location_assignment PIN_AF10 -to sw[3]
-set_location_assignment PIN_AD11 -to sw[4]
-set_location_assignment PIN_AD12 -to sw[5]
-set_location_assignment PIN_AE11 -to sw[6]
-set_location_assignment PIN_AC9 -to sw[7]
 set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
 set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
 set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
@@ -102,7 +94,7 @@ set_global_assignment -name SYSTEMVERILOG_FILE tb_seccionFSM.sv
 set_location_assignment PIN_V16 -to cuadrante_actual[0]
 set_location_assignment PIN_W16 -to cuadrante_actual[1]
 set_location_assignment PIN_V17 -to cuadrante_actual[2]
-set_location_assignment PIN_AA15 -to reset_color
+set_location_assignment PIN_AD10 -to reset_color
 set_global_assignment -name SYSTEMVERILOG_FILE ff_t.sv
 set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
 set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top

@@ -134,6 +134,10 @@
 				{
 					"name" : "cuadrante",
 					"strict" : false
+				},
+				{
+					"name" : "reset_color",
+					"strict" : false
 				}
 			]
 		}
