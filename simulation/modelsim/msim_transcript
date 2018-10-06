@@ -10,42 +10,40 @@
 # Copying E:/intelFPGA_lite/18.0/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
 # Modifying modelsim.ini
 # 
-# vlog -sv -work work +incdir+C:/Users/Chris/Documents/TEC/Taller/LAB_5/VGA_Controller_FPGA {C:/Users/Chris/Documents/TEC/Taller/LAB_5/VGA_Controller_FPGA/random_color.sv}
+# vlog -sv -work work +incdir+C:/Users/Chris/Documents/TEC/Taller/LAB_5/VGA_Controller_FPGA {C:/Users/Chris/Documents/TEC/Taller/LAB_5/VGA_Controller_FPGA/seccionFSM.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 01:39:05 on Oct 04,2018
-# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Chris/Documents/TEC/Taller/LAB_5/VGA_Controller_FPGA" C:/Users/Chris/Documents/TEC/Taller/LAB_5/VGA_Controller_FPGA/random_color.sv 
-# -- Compiling module random_color
+# Start time: 23:18:39 on Oct 05,2018
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Chris/Documents/TEC/Taller/LAB_5/VGA_Controller_FPGA" C:/Users/Chris/Documents/TEC/Taller/LAB_5/VGA_Controller_FPGA/seccionFSM.sv 
+# -- Compiling module seccionFSM
 # 
 # Top level modules:
-# 	random_color
-# End time: 01:39:05 on Oct 04,2018, Elapsed time: 0:00:00
+# 	seccionFSM
+# End time: 23:18:40 on Oct 05,2018, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+C:/Users/Chris/Documents/TEC/Taller/LAB_5/VGA_Controller_FPGA {C:/Users/Chris/Documents/TEC/Taller/LAB_5/VGA_Controller_FPGA/tb_random_color.sv}
+# vlog -sv -work work +incdir+C:/Users/Chris/Documents/TEC/Taller/LAB_5/VGA_Controller_FPGA {C:/Users/Chris/Documents/TEC/Taller/LAB_5/VGA_Controller_FPGA/tb_seccionFSM.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 01:39:05 on Oct 04,2018
-# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Chris/Documents/TEC/Taller/LAB_5/VGA_Controller_FPGA" C:/Users/Chris/Documents/TEC/Taller/LAB_5/VGA_Controller_FPGA/tb_random_color.sv 
-# -- Compiling module tb_random_color
+# Start time: 23:18:40 on Oct 05,2018
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Chris/Documents/TEC/Taller/LAB_5/VGA_Controller_FPGA" C:/Users/Chris/Documents/TEC/Taller/LAB_5/VGA_Controller_FPGA/tb_seccionFSM.sv 
+# -- Compiling module tb_seccionFSM
 # 
 # Top level modules:
-# 	tb_random_color
-# End time: 01:39:06 on Oct 04,2018, Elapsed time: 0:00:01
+# 	tb_seccionFSM
+# End time: 23:18:40 on Oct 05,2018, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
-vsim work.tb_random_color
-# vsim work.tb_random_color 
-# Start time: 01:39:10 on Oct 04,2018
+vsim work.tb_seccionFSM
+# vsim work.tb_seccionFSM 
+# Start time: 23:18:46 on Oct 05,2018
 # Loading sv_std.std
-# Loading work.tb_random_color
-# Loading work.random_color
-add wave -position end  sim:/tb_random_color/clock
-add wave -position end  sim:/tb_random_color/reset
-add wave -position end  sim:/tb_random_color/x
-add wave -position end  sim:/tb_random_color/rnd
-add wave -position end  sim:/tb_random_color/clk
-add wave -position end  sim:/tb_random_color/rst
+# Loading work.tb_seccionFSM
+# Loading work.seccionFSM
+add wave -position end  sim:/tb_seccionFSM/estadoActual
+add wave -position end  sim:/tb_seccionFSM/estadoSiguiente
+add wave -position end  sim:/tb_seccionFSM/clk_referencia
+add wave -position end  sim:/tb_seccionFSM/reset
 # ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
 #           File in use by: Chris  Hostname: DESKTOP-QNMHHR9  ProcessID: 5444
-#           Attempting to use alternate WLF file "./wlfteregjd".
+#           Attempting to use alternate WLF file "./wlftezkxrt".
 # ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
-#           Using alternate file: ./wlfteregjd
+#           Using alternate file: ./wlftezkxrt
 run -all

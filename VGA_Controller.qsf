@@ -38,7 +38,7 @@
 
 set_global_assignment -name FAMILY "Cyclone V"
 set_global_assignment -name DEVICE 5CSEMA5F31C6
-set_global_assignment -name TOP_LEVEL_ENTITY MAIN_VGA_TEST
+set_global_assignment -name TOP_LEVEL_ENTITY tb_seccionFSM
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION 18.0.0
 set_global_assignment -name PROJECT_CREATION_TIME_DATE "00:17:20  SEPTEMBER 30, 2018"
 set_global_assignment -name LAST_QUARTUS_VERSION "18.0.0 Lite Edition"
@@ -85,9 +85,6 @@ set_location_assignment PIN_A11 -to n25MHZCLK
 set_location_assignment PIN_Y16 -to cuadrante
 set_global_assignment -name SYSTEMVERILOG_FILE VGA_Controller.sv
 set_global_assignment -name SYSTEMVERILOG_FILE MAIN_VGA_TEST.sv
-set_global_assignment -name SYSTEMVERILOG_FILE contador_cuadrante.sv
-set_global_assignment -name SYSTEMVERILOG_FILE random_color.sv
-set_global_assignment -name SYSTEMVERILOG_FILE tb_random_color.sv
 set_global_assignment -name SYSTEMVERILOG_FILE seccionFSM.sv
 set_global_assignment -name SYSTEMVERILOG_FILE pintadorXY.sv
 set_global_assignment -name SYSTEMVERILOG_FILE tb_seccionFSM.sv
@@ -95,7 +92,7 @@ set_location_assignment PIN_V16 -to cuadrante_actual[0]
 set_location_assignment PIN_W16 -to cuadrante_actual[1]
 set_location_assignment PIN_V17 -to cuadrante_actual[2]
 set_location_assignment PIN_AD10 -to reset_color
-set_global_assignment -name SYSTEMVERILOG_FILE ff_t.sv
+set_global_assignment -name SYSTEMVERILOG_FILE tb_MAIN_VGA_TEST.sv
 set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
 set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top

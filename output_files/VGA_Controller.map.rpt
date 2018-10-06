@@ -1,5 +1,5 @@
-Analysis & Synthesis report for VGA_Controller
-Thu Oct 04 23:42:29 2018
+Analysis & Elaboration report for VGA_Controller
+Fri Oct 05 23:18:18 2018
 Quartus Prime Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
 
 
@@ -7,21 +7,11 @@ Quartus Prime Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
 ; Table of Contents ;
 ---------------------
   1. Legal Notice
-  2. Analysis & Synthesis Summary
-  3. Analysis & Synthesis Settings
-  4. Parallel Compilation
-  5. Analysis & Synthesis Source Files Read
-  6. Analysis & Synthesis Resource Usage Summary
-  7. Analysis & Synthesis Resource Utilization by Entity
-  8. Analysis & Synthesis DSP Block Usage Summary
-  9. Logic Cells Representing Combinational Loops
- 10. Registers Removed During Synthesis
- 11. General Register Statistics
- 12. Multiplexer Restructuring Statistics (Restructuring Performed)
- 13. Post-Synthesis Netlist Statistics for Top Partition
- 14. Elapsed Time Per Partition
- 15. Analysis & Synthesis Messages
- 16. Analysis & Synthesis Suppressed Messages
+  2. Analysis & Elaboration Summary
+  3. Parallel Compilation
+  4. Analysis & Elaboration Settings
+  5. Port Connectivity Checks: "seccionFSM:dut"
+  6. Analysis & Elaboration Messages
 
 
 
@@ -44,36 +34,47 @@ refer to the applicable agreement for further details.
 
 
 
-+-------------------------------------------------------------------------------+
-; Analysis & Synthesis Summary                                                  ;
-+---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Thu Oct 04 23:42:29 2018       ;
-; Quartus Prime Version           ; 18.0.0 Build 614 04/24/2018 SJ Lite Edition ;
-; Revision Name                   ; VGA_Controller                              ;
-; Top-level Entity Name           ; MAIN_VGA_TEST                               ;
-; Family                          ; Cyclone V                                   ;
-; Logic utilization (in ALMs)     ; N/A                                         ;
-; Total registers                 ; 151                                         ;
-; Total pins                      ; 36                                          ;
-; Total virtual pins              ; 0                                           ;
-; Total block memory bits         ; 0                                           ;
-; Total DSP Blocks                ; 2                                           ;
-; Total HSSI RX PCSs              ; 0                                           ;
-; Total HSSI PMA RX Deserializers ; 0                                           ;
-; Total HSSI TX PCSs              ; 0                                           ;
-; Total HSSI PMA TX Serializers   ; 0                                           ;
-; Total PLLs                      ; 0                                           ;
-; Total DLLs                      ; 0                                           ;
-+---------------------------------+---------------------------------------------+
++-----------------------------------------------------------------------------+
+; Analysis & Elaboration Summary                                              ;
++-------------------------------+---------------------------------------------+
+; Analysis & Elaboration Status ; Successful - Fri Oct 05 23:18:18 2018       ;
+; Quartus Prime Version         ; 18.0.0 Build 614 04/24/2018 SJ Lite Edition ;
+; Revision Name                 ; VGA_Controller                              ;
+; Top-level Entity Name         ; tb_seccionFSM                               ;
+; Family                        ; Cyclone V                                   ;
+; Logic utilization (in ALMs)   ; N/A until Partition Merge                   ;
+; Total registers               ; N/A until Partition Merge                   ;
+; Total pins                    ; N/A until Partition Merge                   ;
+; Total virtual pins            ; N/A until Partition Merge                   ;
+; Total block memory bits       ; N/A until Partition Merge                   ;
+; Total PLLs                    ; N/A until Partition Merge                   ;
+; Total DLLs                    ; N/A until Partition Merge                   ;
++-------------------------------+---------------------------------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 4           ;
+; Maximum allowed            ; 2           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 1           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
++----------------------------+-------------+
 
 
 +---------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Settings                                                                                             ;
+; Analysis & Elaboration Settings                                                                                           ;
 +---------------------------------------------------------------------------------+--------------------+--------------------+
 ; Option                                                                          ; Setting            ; Default Value      ;
 +---------------------------------------------------------------------------------+--------------------+--------------------+
 ; Device                                                                          ; 5CSEMA5F31C6       ;                    ;
-; Top-level entity name                                                           ; MAIN_VGA_TEST      ; VGA_Controller     ;
+; Top-level entity name                                                           ; tb_seccionFSM      ; VGA_Controller     ;
 ; Family name                                                                     ; Cyclone V          ; Cyclone V          ;
 ; Use smart compilation                                                           ; Off                ; Off                ;
 ; Enable parallel Assembler and Timing Analyzer during compilation                ; On                 ; On                 ;
@@ -154,276 +155,43 @@ refer to the applicable agreement for further details.
 +---------------------------------------------------------------------------------+--------------------+--------------------+
 
 
-+------------------------------------------+
-; Parallel Compilation                     ;
-+----------------------------+-------------+
-; Processors                 ; Number      ;
-+----------------------------+-------------+
-; Number detected on machine ; 4           ;
-; Maximum allowed            ; 2           ;
-;                            ;             ;
-; Average used               ; 1.00        ;
-; Maximum used               ; 2           ;
-;                            ;             ;
-; Usage by Processor         ; % Time Used ;
-;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   0.0%      ;
-+----------------------------+-------------+
++----------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "seccionFSM:dut"                                                                                 ;
++------------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port             ; Type   ; Severity ; Details                                                                             ;
++------------------+--------+----------+-------------------------------------------------------------------------------------+
+; estado_siguiente ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------------------+--------+----------+-------------------------------------------------------------------------------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                        ;
-+----------------------------------+-----------------+------------------------------+---------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                    ; Library ;
-+----------------------------------+-----------------+------------------------------+---------------------------------------------------------------------------------+---------+
-; VGA_Controller.sv                ; yes             ; User SystemVerilog HDL File  ; C:/Users/Chris/Documents/TEC/Taller/LAB_5/VGA_Controller_FPGA/VGA_Controller.sv ;         ;
-; MAIN_VGA_TEST.sv                 ; yes             ; User SystemVerilog HDL File  ; C:/Users/Chris/Documents/TEC/Taller/LAB_5/VGA_Controller_FPGA/MAIN_VGA_TEST.sv  ;         ;
-; seccionFSM.sv                    ; yes             ; User SystemVerilog HDL File  ; C:/Users/Chris/Documents/TEC/Taller/LAB_5/VGA_Controller_FPGA/seccionFSM.sv     ;         ;
-; pintadorXY.sv                    ; yes             ; User SystemVerilog HDL File  ; C:/Users/Chris/Documents/TEC/Taller/LAB_5/VGA_Controller_FPGA/pintadorXY.sv     ;         ;
-+----------------------------------+-----------------+------------------------------+---------------------------------------------------------------------------------+---------+
-
-
-+---------------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary                   ;
-+---------------------------------------------+-----------------+
-; Resource                                    ; Usage           ;
-+---------------------------------------------+-----------------+
-; Estimate of Logic utilization (ALMs needed) ; 93              ;
-;                                             ;                 ;
-; Combinational ALUT usage for logic          ; 140             ;
-;     -- 7 input functions                    ; 0               ;
-;     -- 6 input functions                    ; 29              ;
-;     -- 5 input functions                    ; 32              ;
-;     -- 4 input functions                    ; 6               ;
-;     -- <=3 input functions                  ; 73              ;
-;                                             ;                 ;
-; Dedicated logic registers                   ; 151             ;
-;                                             ;                 ;
-; I/O pins                                    ; 36              ;
-;                                             ;                 ;
-; Total DSP Blocks                            ; 2               ;
-;                                             ;                 ;
-; Maximum fan-out node                        ; cuadrante~input ;
-; Maximum fan-out                             ; 86              ;
-; Total fan-out                               ; 1182            ;
-; Average fan-out                             ; 3.24            ;
-+---------------------------------------------+-----------------+
-
-
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                 ;
-+---------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-------------------------------------------+---------------+--------------+
-; Compilation Hierarchy Node      ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                       ; Entity Name   ; Library Name ;
-+---------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-------------------------------------------+---------------+--------------+
-; |MAIN_VGA_TEST                  ; 140 (24)            ; 151 (0)                   ; 0                 ; 2          ; 36   ; 0            ; |MAIN_VGA_TEST                            ; MAIN_VGA_TEST ; work         ;
-;    |HV_sync:vga_sync_unit|      ; 30 (30)             ; 23 (23)                   ; 0                 ; 0          ; 0    ; 0            ; |MAIN_VGA_TEST|HV_sync:vga_sync_unit      ; HV_sync       ; work         ;
-;    |pintadorXY:pintadorXY_unit| ; 79 (79)             ; 125 (125)                 ; 0                 ; 2          ; 0    ; 0            ; |MAIN_VGA_TEST|pintadorXY:pintadorXY_unit ; pintadorXY    ; work         ;
-;    |seccionFSM:seccionFSM_unit| ; 7 (7)               ; 3 (3)                     ; 0                 ; 0          ; 0    ; 0            ; |MAIN_VGA_TEST|seccionFSM:seccionFSM_unit ; seccionFSM    ; work         ;
-+---------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-------------------------------------------+---------------+--------------+
-Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
-
-
-+-----------------------------------------------+
-; Analysis & Synthesis DSP Block Usage Summary  ;
-+---------------------------------+-------------+
-; Statistic                       ; Number Used ;
-+---------------------------------+-------------+
-; Two Independent 18x18           ; 2           ;
-; Total number of DSP blocks      ; 2           ;
-;                                 ;             ;
-; Fixed Point Unsigned Multiplier ; 2           ;
-+---------------------------------+-------------+
-
-
-+------------------------------------------------------------+
-; Logic Cells Representing Combinational Loops               ;
-+--------------------------------------------------------+---+
-; Logic Cell Name                                        ;   ;
-+--------------------------------------------------------+---+
-; pintadorXY:pintadorXY_unit|Add2~0                      ;   ;
-; Number of logic cells representing combinational loops ; 1 ;
-+--------------------------------------------------------+---+
-Note: All cells listed above may not be present at the end of synthesis due to various synthesis optimizations.
-
-
-+-----------------------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                                            ;
-+-----------------------------------------------+-----------------------------------------------+
-; Register name                                 ; Reason for Removal                            ;
-+-----------------------------------------------+-----------------------------------------------+
-; pintadorXY:pintadorXY_unit|g_1[0,1]           ; Stuck at GND due to stuck port data_in        ;
-; pintadorXY:pintadorXY_unit|r_3[0..2]          ; Stuck at GND due to stuck port data_in        ;
-; pintadorXY:pintadorXY_unit|g_1[2]             ; Merged with pintadorXY:pintadorXY_unit|b_1[0] ;
-; pintadorXY:pintadorXY_unit|r_1[0]             ; Merged with pintadorXY:pintadorXY_unit|b_1[0] ;
-; pintadorXY:pintadorXY_unit|g_1[3]             ; Merged with pintadorXY:pintadorXY_unit|b_1[1] ;
-; pintadorXY:pintadorXY_unit|r_1[1]             ; Merged with pintadorXY:pintadorXY_unit|b_1[1] ;
-; pintadorXY:pintadorXY_unit|g_3[0]             ; Merged with pintadorXY:pintadorXY_unit|b_3[0] ;
-; pintadorXY:pintadorXY_unit|r_3[3]             ; Merged with pintadorXY:pintadorXY_unit|b_3[0] ;
-; pintadorXY:pintadorXY_unit|g_3[1]             ; Merged with pintadorXY:pintadorXY_unit|b_3[1] ;
-; pintadorXY:pintadorXY_unit|g_3[2]             ; Merged with pintadorXY:pintadorXY_unit|b_3[2] ;
-; pintadorXY:pintadorXY_unit|count_temp[18..31] ; Lost fanout                                   ;
-; Total Number of Removed Registers = 27        ;                                               ;
-+-----------------------------------------------+-----------------------------------------------+
-
-
-+------------------------------------------------------+
-; General Register Statistics                          ;
-+----------------------------------------------+-------+
-; Statistic                                    ; Value ;
-+----------------------------------------------+-------+
-; Total registers                              ; 151   ;
-; Number of registers using Synchronous Clear  ; 41    ;
-; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 105   ;
-; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 103   ;
-; Number of registers using Preset             ; 0     ;
-+----------------------------------------------+-------+
-
-
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                    ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                          ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------+
-; 6:1                ; 3 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; Yes        ; |MAIN_VGA_TEST|pintadorXY:pintadorXY_unit|r_elec[1] ;
-; 6:1                ; 2 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |MAIN_VGA_TEST|pintadorXY:pintadorXY_unit|g_elec[1] ;
-; 6:1                ; 19 bits   ; 76 LEs        ; 38 LEs               ; 38 LEs                 ; Yes        ; |MAIN_VGA_TEST|pintadorXY:pintadorXY_unit|b_elec[1] ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------+
-
-
-+-----------------------------------------------------+
-; Post-Synthesis Netlist Statistics for Top Partition ;
-+-----------------------+-----------------------------+
-; Type                  ; Count                       ;
-+-----------------------+-----------------------------+
-; arriav_ff             ; 151                         ;
-;     CLR               ; 2                           ;
-;     ENA CLR           ; 83                          ;
-;     ENA CLR SCLR      ; 20                          ;
-;     SCLR              ; 21                          ;
-;     plain             ; 25                          ;
-; arriav_lcell_comb     ; 143                         ;
-;     arith             ; 64                          ;
-;         1 data inputs ; 36                          ;
-;         2 data inputs ; 28                          ;
-;     normal            ; 79                          ;
-;         0 data inputs ; 2                           ;
-;         1 data inputs ; 3                           ;
-;         2 data inputs ; 1                           ;
-;         3 data inputs ; 6                           ;
-;         4 data inputs ; 6                           ;
-;         5 data inputs ; 32                          ;
-;         6 data inputs ; 29                          ;
-; arriav_mac            ; 2                           ;
-; boundary_port         ; 36                          ;
-;                       ;                             ;
-; Max LUT depth         ; 3.00                        ;
-; Average LUT depth     ; 1.64                        ;
-+-----------------------+-----------------------------+
-
-
-+-------------------------------+
-; Elapsed Time Per Partition    ;
-+----------------+--------------+
-; Partition Name ; Elapsed Time ;
-+----------------+--------------+
-; Top            ; 00:00:01     ;
-+----------------+--------------+
-
-
-+-------------------------------+
-; Analysis & Synthesis Messages ;
-+-------------------------------+
++---------------------------------+
+; Analysis & Elaboration Messages ;
++---------------------------------+
 Info: *******************************************************************
-Info: Running Quartus Prime Analysis & Synthesis
+Info: Running Quartus Prime Analysis & Elaboration
     Info: Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
-    Info: Processing started: Thu Oct 04 23:42:08 2018
-Info: Command: quartus_map --read_settings_files=on --write_settings_files=off VGA_Controller -c VGA_Controller
+    Info: Processing started: Fri Oct 05 23:18:01 2018
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off VGA_Controller -c VGA_Controller --analysis_and_elaboration
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file vga_controller.sv
     Info (12023): Found entity 1: HV_sync File: C:/Users/Chris/Documents/TEC/Taller/LAB_5/VGA_Controller_FPGA/VGA_Controller.sv Line: 2
 Info (12021): Found 1 design units, including 1 entities, in source file main_vga_test.sv
     Info (12023): Found entity 1: MAIN_VGA_TEST File: C:/Users/Chris/Documents/TEC/Taller/LAB_5/VGA_Controller_FPGA/MAIN_VGA_TEST.sv Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file contador_cuadrante.sv
-    Info (12023): Found entity 1: contador_cuadrante File: C:/Users/Chris/Documents/TEC/Taller/LAB_5/VGA_Controller_FPGA/contador_cuadrante.sv Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file random_color.sv
-    Info (12023): Found entity 1: random_color File: C:/Users/Chris/Documents/TEC/Taller/LAB_5/VGA_Controller_FPGA/random_color.sv Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file tb_random_color.sv
-    Info (12023): Found entity 1: tb_random_color File: C:/Users/Chris/Documents/TEC/Taller/LAB_5/VGA_Controller_FPGA/tb_random_color.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file seccionfsm.sv
     Info (12023): Found entity 1: seccionFSM File: C:/Users/Chris/Documents/TEC/Taller/LAB_5/VGA_Controller_FPGA/seccionFSM.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file pintadorxy.sv
     Info (12023): Found entity 1: pintadorXY File: C:/Users/Chris/Documents/TEC/Taller/LAB_5/VGA_Controller_FPGA/pintadorXY.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file tb_seccionfsm.sv
     Info (12023): Found entity 1: tb_seccionFSM File: C:/Users/Chris/Documents/TEC/Taller/LAB_5/VGA_Controller_FPGA/tb_seccionFSM.sv Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file ff_t.sv
-    Info (12023): Found entity 1: ff_t File: C:/Users/Chris/Documents/TEC/Taller/LAB_5/VGA_Controller_FPGA/ff_t.sv Line: 1
-Info (12127): Elaborating entity "MAIN_VGA_TEST" for the top level hierarchy
-Info (12128): Elaborating entity "HV_sync" for hierarchy "HV_sync:vga_sync_unit" File: C:/Users/Chris/Documents/TEC/Taller/LAB_5/VGA_Controller_FPGA/MAIN_VGA_TEST.sv Line: 12
-Warning (10230): Verilog HDL assignment warning at VGA_Controller.sv(62): truncated value with size 32 to match size of target (10) File: C:/Users/Chris/Documents/TEC/Taller/LAB_5/VGA_Controller_FPGA/VGA_Controller.sv Line: 62
-Warning (10230): Verilog HDL assignment warning at VGA_Controller.sv(66): truncated value with size 32 to match size of target (10) File: C:/Users/Chris/Documents/TEC/Taller/LAB_5/VGA_Controller_FPGA/VGA_Controller.sv Line: 66
-Info (12128): Elaborating entity "seccionFSM" for hierarchy "seccionFSM:seccionFSM_unit" File: C:/Users/Chris/Documents/TEC/Taller/LAB_5/VGA_Controller_FPGA/MAIN_VGA_TEST.sv Line: 14
-Info (12128): Elaborating entity "pintadorXY" for hierarchy "pintadorXY:pintadorXY_unit" File: C:/Users/Chris/Documents/TEC/Taller/LAB_5/VGA_Controller_FPGA/MAIN_VGA_TEST.sv Line: 16
-Warning (10230): Verilog HDL assignment warning at pintadorXY.sv(40): truncated value with size 32 to match size of target (8) File: C:/Users/Chris/Documents/TEC/Taller/LAB_5/VGA_Controller_FPGA/pintadorXY.sv Line: 40
-Warning (10230): Verilog HDL assignment warning at pintadorXY.sv(41): truncated value with size 32 to match size of target (8) File: C:/Users/Chris/Documents/TEC/Taller/LAB_5/VGA_Controller_FPGA/pintadorXY.sv Line: 41
-Warning (10230): Verilog HDL assignment warning at pintadorXY.sv(47): truncated value with size 32 to match size of target (8) File: C:/Users/Chris/Documents/TEC/Taller/LAB_5/VGA_Controller_FPGA/pintadorXY.sv Line: 47
-Warning (10230): Verilog HDL assignment warning at pintadorXY.sv(48): truncated value with size 32 to match size of target (8) File: C:/Users/Chris/Documents/TEC/Taller/LAB_5/VGA_Controller_FPGA/pintadorXY.sv Line: 48
-Warning (10230): Verilog HDL assignment warning at pintadorXY.sv(52): truncated value with size 32 to match size of target (8) File: C:/Users/Chris/Documents/TEC/Taller/LAB_5/VGA_Controller_FPGA/pintadorXY.sv Line: 52
-Warning (10230): Verilog HDL assignment warning at pintadorXY.sv(53): truncated value with size 32 to match size of target (8) File: C:/Users/Chris/Documents/TEC/Taller/LAB_5/VGA_Controller_FPGA/pintadorXY.sv Line: 53
-Warning (10230): Verilog HDL assignment warning at pintadorXY.sv(58): truncated value with size 32 to match size of target (8) File: C:/Users/Chris/Documents/TEC/Taller/LAB_5/VGA_Controller_FPGA/pintadorXY.sv Line: 58
-Warning (10230): Verilog HDL assignment warning at pintadorXY.sv(60): truncated value with size 32 to match size of target (8) File: C:/Users/Chris/Documents/TEC/Taller/LAB_5/VGA_Controller_FPGA/pintadorXY.sv Line: 60
-Warning (10240): Verilog HDL Always Construct warning at pintadorXY.sv(19): inferring latch(es) for variable "r_0", which holds its previous value in one or more paths through the always construct File: C:/Users/Chris/Documents/TEC/Taller/LAB_5/VGA_Controller_FPGA/pintadorXY.sv Line: 19
-Warning (10240): Verilog HDL Always Construct warning at pintadorXY.sv(19): inferring latch(es) for variable "g_0", which holds its previous value in one or more paths through the always construct File: C:/Users/Chris/Documents/TEC/Taller/LAB_5/VGA_Controller_FPGA/pintadorXY.sv Line: 19
-Warning (10240): Verilog HDL Always Construct warning at pintadorXY.sv(19): inferring latch(es) for variable "b_0", which holds its previous value in one or more paths through the always construct File: C:/Users/Chris/Documents/TEC/Taller/LAB_5/VGA_Controller_FPGA/pintadorXY.sv Line: 19
-Info (10041): Inferred latch for "b_0[0]" at pintadorXY.sv(38) File: C:/Users/Chris/Documents/TEC/Taller/LAB_5/VGA_Controller_FPGA/pintadorXY.sv Line: 38
-Info (10041): Inferred latch for "b_0[1]" at pintadorXY.sv(38) File: C:/Users/Chris/Documents/TEC/Taller/LAB_5/VGA_Controller_FPGA/pintadorXY.sv Line: 38
-Info (10041): Inferred latch for "b_0[2]" at pintadorXY.sv(38) File: C:/Users/Chris/Documents/TEC/Taller/LAB_5/VGA_Controller_FPGA/pintadorXY.sv Line: 38
-Info (10041): Inferred latch for "b_0[3]" at pintadorXY.sv(38) File: C:/Users/Chris/Documents/TEC/Taller/LAB_5/VGA_Controller_FPGA/pintadorXY.sv Line: 38
-Info (10041): Inferred latch for "b_0[4]" at pintadorXY.sv(38) File: C:/Users/Chris/Documents/TEC/Taller/LAB_5/VGA_Controller_FPGA/pintadorXY.sv Line: 38
-Info (10041): Inferred latch for "b_0[5]" at pintadorXY.sv(38) File: C:/Users/Chris/Documents/TEC/Taller/LAB_5/VGA_Controller_FPGA/pintadorXY.sv Line: 38
-Info (10041): Inferred latch for "b_0[6]" at pintadorXY.sv(38) File: C:/Users/Chris/Documents/TEC/Taller/LAB_5/VGA_Controller_FPGA/pintadorXY.sv Line: 38
-Info (10041): Inferred latch for "b_0[7]" at pintadorXY.sv(38) File: C:/Users/Chris/Documents/TEC/Taller/LAB_5/VGA_Controller_FPGA/pintadorXY.sv Line: 38
-Info (10041): Inferred latch for "g_0[0]" at pintadorXY.sv(38) File: C:/Users/Chris/Documents/TEC/Taller/LAB_5/VGA_Controller_FPGA/pintadorXY.sv Line: 38
-Info (10041): Inferred latch for "g_0[1]" at pintadorXY.sv(38) File: C:/Users/Chris/Documents/TEC/Taller/LAB_5/VGA_Controller_FPGA/pintadorXY.sv Line: 38
-Info (10041): Inferred latch for "g_0[2]" at pintadorXY.sv(38) File: C:/Users/Chris/Documents/TEC/Taller/LAB_5/VGA_Controller_FPGA/pintadorXY.sv Line: 38
-Info (10041): Inferred latch for "g_0[3]" at pintadorXY.sv(38) File: C:/Users/Chris/Documents/TEC/Taller/LAB_5/VGA_Controller_FPGA/pintadorXY.sv Line: 38
-Info (10041): Inferred latch for "g_0[4]" at pintadorXY.sv(38) File: C:/Users/Chris/Documents/TEC/Taller/LAB_5/VGA_Controller_FPGA/pintadorXY.sv Line: 38
-Info (10041): Inferred latch for "g_0[5]" at pintadorXY.sv(38) File: C:/Users/Chris/Documents/TEC/Taller/LAB_5/VGA_Controller_FPGA/pintadorXY.sv Line: 38
-Info (10041): Inferred latch for "g_0[6]" at pintadorXY.sv(38) File: C:/Users/Chris/Documents/TEC/Taller/LAB_5/VGA_Controller_FPGA/pintadorXY.sv Line: 38
-Info (10041): Inferred latch for "g_0[7]" at pintadorXY.sv(38) File: C:/Users/Chris/Documents/TEC/Taller/LAB_5/VGA_Controller_FPGA/pintadorXY.sv Line: 38
-Info (10041): Inferred latch for "r_0[0]" at pintadorXY.sv(38) File: C:/Users/Chris/Documents/TEC/Taller/LAB_5/VGA_Controller_FPGA/pintadorXY.sv Line: 38
-Info (10041): Inferred latch for "r_0[1]" at pintadorXY.sv(38) File: C:/Users/Chris/Documents/TEC/Taller/LAB_5/VGA_Controller_FPGA/pintadorXY.sv Line: 38
-Info (10041): Inferred latch for "r_0[2]" at pintadorXY.sv(38) File: C:/Users/Chris/Documents/TEC/Taller/LAB_5/VGA_Controller_FPGA/pintadorXY.sv Line: 38
-Info (10041): Inferred latch for "r_0[3]" at pintadorXY.sv(38) File: C:/Users/Chris/Documents/TEC/Taller/LAB_5/VGA_Controller_FPGA/pintadorXY.sv Line: 38
-Info (10041): Inferred latch for "r_0[4]" at pintadorXY.sv(38) File: C:/Users/Chris/Documents/TEC/Taller/LAB_5/VGA_Controller_FPGA/pintadorXY.sv Line: 38
-Info (10041): Inferred latch for "r_0[5]" at pintadorXY.sv(38) File: C:/Users/Chris/Documents/TEC/Taller/LAB_5/VGA_Controller_FPGA/pintadorXY.sv Line: 38
-Info (10041): Inferred latch for "r_0[6]" at pintadorXY.sv(38) File: C:/Users/Chris/Documents/TEC/Taller/LAB_5/VGA_Controller_FPGA/pintadorXY.sv Line: 38
-Info (10041): Inferred latch for "r_0[7]" at pintadorXY.sv(38) File: C:/Users/Chris/Documents/TEC/Taller/LAB_5/VGA_Controller_FPGA/pintadorXY.sv Line: 38
-Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "n_sync" is stuck at GND File: C:/Users/Chris/Documents/TEC/Taller/LAB_5/VGA_Controller_FPGA/MAIN_VGA_TEST.sv Line: 2
-    Warning (13410): Pin "n_blanc" is stuck at VCC File: C:/Users/Chris/Documents/TEC/Taller/LAB_5/VGA_Controller_FPGA/MAIN_VGA_TEST.sv Line: 2
-Info (286030): Timing-Driven Synthesis is running
-Info (17049): 14 registers lost all their fanouts during netlist optimizations.
-Info (144001): Generated suppressed messages file C:/Users/Chris/Documents/TEC/Taller/LAB_5/VGA_Controller_FPGA/output_files/VGA_Controller.map.smsg
-Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
-    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 236 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 4 input pins
-    Info (21059): Implemented 32 output pins
-    Info (21061): Implemented 198 logic cells
-    Info (21062): Implemented 2 DSP elements
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 17 warnings
-    Info: Peak virtual memory: 4830 megabytes
-    Info: Processing ended: Thu Oct 04 23:42:29 2018
-    Info: Elapsed time: 00:00:21
-    Info: Total CPU time (on all processors): 00:00:45
-
-
-+------------------------------------------+
-; Analysis & Synthesis Suppressed Messages ;
-+------------------------------------------+
-The suppressed messages can be found in C:/Users/Chris/Documents/TEC/Taller/LAB_5/VGA_Controller_FPGA/output_files/VGA_Controller.map.smsg.
+Info (12021): Found 1 design units, including 1 entities, in source file tb_main_vga_test.sv
+    Info (12023): Found entity 1: tb_MAIN_VGA_TEST File: C:/Users/Chris/Documents/TEC/Taller/LAB_5/VGA_Controller_FPGA/tb_MAIN_VGA_TEST.sv Line: 1
+Info (12127): Elaborating entity "tb_seccionFSM" for the top level hierarchy
+Info (12128): Elaborating entity "seccionFSM" for hierarchy "seccionFSM:dut" File: C:/Users/Chris/Documents/TEC/Taller/LAB_5/VGA_Controller_FPGA/tb_seccionFSM.sv Line: 7
+Info: Quartus Prime Analysis & Elaboration was successful. 0 errors, 1 warning
+    Info: Peak virtual memory: 4792 megabytes
+    Info: Processing ended: Fri Oct 05 23:18:18 2018
+    Info: Elapsed time: 00:00:17
+    Info: Total CPU time (on all processors): 00:00:40
 
 

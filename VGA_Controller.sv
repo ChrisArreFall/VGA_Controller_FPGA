@@ -33,10 +33,10 @@ module HV_sync(input  logic clk, reset,
 			
 			
 			// Variables para mantener la localizacion de los pixeles
-			logic [9:0] h_count_temp, h_count_siguiente, v_count_temp, v_count_ssiguiente;
+			logic [9:0] h_count_temp, h_count_siguiente, v_count_temp, v_count_siguiente;
 			
 			//Variables para guardar los estados vsync y hsync
-			logic vsync_temp, hsync_reg;
+			logic vsync_var, hsync_var;
 			logic vsync_siguiente, hsync_siguiente;
 		 
 			
@@ -45,15 +45,15 @@ module HV_sync(input  logic clk, reset,
 					 begin
 								  v_count_temp <= 0;
 								  h_count_temp <= 0;
-								  vsync_temp   <= 0;
-								  hsync_reg    <= 0;
+								  vsync_var   <= 0;
+								  hsync_var    <= 0;
 							end
 				else
 					 begin
-								  v_count_temp <= v_count_ssiguiente;
+								  v_count_temp <= v_count_siguiente;
 								  h_count_temp <= h_count_siguiente;
-								  vsync_temp   <= vsync_siguiente;
-								  hsync_reg   <= hsync_siguiente;
+								  vsync_var   <= vsync_siguiente;
+								  hsync_var   <= hsync_siguiente;
 							end
 					
 			// logica de los contadores en V
@@ -63,7 +63,7 @@ module HV_sync(input  logic clk, reset,
 									h_count_temp == H_TOTAL ? 0 : h_count_temp + 1
 							 : h_count_temp;
 				
-				v_count_ssiguiente = pixel_pos_clk && h_count_temp == H_TOTAL ? 
+				v_count_siguiente = pixel_pos_clk && h_count_temp == H_TOTAL ? 
 									(v_count_temp == V_TOTAL ? 0 : v_count_temp + 1) 
 							 : v_count_temp;
 				end
@@ -82,8 +82,8 @@ module HV_sync(input  logic clk, reset,
                            && (v_count_temp < V_PINTABLE);
 
         
-        assign hsync  = hsync_reg;
-        assign vsync  = vsync_temp;
+        assign hsync  = hsync_var;
+        assign vsync  = vsync_var;
         assign x      = h_count_temp;
         assign y      = v_count_temp;
         assign clk_out = pixel_pos_clk;

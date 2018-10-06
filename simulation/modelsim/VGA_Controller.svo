@@ -16,7 +16,7 @@
 // PROGRAM "Quartus Prime"
 // VERSION "Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition"
 
-// DATE "10/04/2018 23:44:09"
+// DATE "10/05/2018 00:30:25"
 
 // 
 // Device: Altera 5CSEMA5F31C6 Package FBGA896
@@ -42,19 +42,19 @@ module MAIN_VGA_TEST (
 	g,
 	b,
 	cuadrante_actual);
-input 	clk;
-input 	reset;
-input 	reset_color;
-input 	cuadrante;
-output 	hsync;
-output 	vsync;
-output 	n_sync;
-output 	n_blanc;
-output 	n25MHZCLK;
-output 	[7:0] r;
-output 	[7:0] g;
-output 	[7:0] b;
-output 	[2:0] cuadrante_actual;
+input 	logic clk ;
+input 	logic reset ;
+input 	logic reset_color ;
+input 	logic cuadrante ;
+output 	logic hsync ;
+output 	logic vsync ;
+output 	logic n_sync ;
+output 	logic n_blanc ;
+output 	logic n25MHZCLK ;
+output 	logic [7:0] r ;
+output 	logic [7:0] g ;
+output 	logic [7:0] b ;
+output 	logic [2:0] cuadrante_actual ;
 
 // Design Ports Information
 // hsync	=>  Location: PIN_B11,	 I/O Standard: 2.5 V,	 Current Strength: Default
